@@ -24,7 +24,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
+      
+      - name: Set up JDK 8      
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
       
       - name: Run a test of "testViewFsMultipleExportPoint" in TestExportsTable
         run: mvn -pl hadoop-hdfs-project/hadoop-hdfs-nfs test -Dtest=org.apache.hadoop.hdfs.nfs.nfs3.TestExportsTable#testViewFsMultipleExportPoint 
