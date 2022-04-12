@@ -119,6 +119,9 @@ public class TestExportsTable {
       RpcProgramMountd rpcMount = (RpcProgramMountd) mountd.getRpcProgram();
       assertTrue(rpcMount.getExports().size() == 2);
 
+      //I add to test
+      System.out.println("============"+rpcMount.getExports().get(0)+" ::::: "+rpcMount.getExports().get(1)+"=============");
+      
       String exportInMountd1 = rpcMount.getExports().get(0);
       assertTrue(exportInMountd1.equals("/hdfs1"));
 
