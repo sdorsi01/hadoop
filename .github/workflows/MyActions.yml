@@ -31,7 +31,7 @@ jobs:
           java-version: 8
       
       - name: Run a test of "testViewFsMultipleExportPoint" in TestExportsTable
-        run: mvn -pl hadoop-hdfs-project/hadoop-hdfs-nfs test -Dtest=org.apache.hadoop.hdfs.nfs.nfs3.TestExportsTable#testViewFsMultipleExportPoint 
+        run: echo $(mvn -pl hadoop-hdfs-project/hadoop-hdfs-nfs test -Dtest=org.apache.hadoop.hdfs.nfs.nfs3.TestExportsTable#testViewFsMultipleExportPoint)
 
       
       - name: Run multiple tests with NonDex Tool
