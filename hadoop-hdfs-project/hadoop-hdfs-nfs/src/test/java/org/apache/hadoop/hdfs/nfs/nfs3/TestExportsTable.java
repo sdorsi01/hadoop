@@ -123,10 +123,10 @@ public class TestExportsTable {
       System.out.println("============"+rpcMount.getExports().get(0)+" ::::: "+rpcMount.getExports().get(1)+"=============");
       
       String exportInMountd1 = rpcMount.getExports().get(0);
-      assertTrue(exportInMountd1.equals("/hdfs1"));
+      assertTrue(rpcMount.getExports().contains("/hdfs1"));//assertTrue(exportInMountd1.equals("/hdfs1"));
 
       String exportInMountd2 = rpcMount.getExports().get(1);
-      assertTrue(exportInMountd2.equals("/hdfs2"));
+      assertTrue(rpcMount.getExports().contains("/hdfs2"));//assertTrue(exportInMountd2.equals("/hdfs2"));
 
     } finally {
       if (cluster != null) {
